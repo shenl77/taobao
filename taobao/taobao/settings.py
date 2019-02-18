@@ -131,6 +131,7 @@ PROXIES = [
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+SCHEDULER_PERSIST = True
 
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
