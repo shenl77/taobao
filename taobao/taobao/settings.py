@@ -69,7 +69,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'taobao.pipelines.MongoPipeline': 400,
+	'scrapy_redis.pipelines.RedisPipeline': 301,
+	'taobao.pipelines.MongoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -127,6 +128,12 @@ PROXIES = [
 
 ]
 
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6379
 
 
 
