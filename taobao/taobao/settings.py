@@ -97,7 +97,7 @@ ITEM_PIPELINES = {
 MONGO_URI = 'localhost:27017'
 MONGO_DATABASE = 'taobao'
 KEYWORD = '牛仔裤男'
-DEPTH = 1
+DEPTH = 5
 
 
 USER_AGENTS = [
@@ -133,7 +133,7 @@ SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER_PERSIST = True
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '192.168.3.2'
 REDIS_PORT = 6379
 
 
